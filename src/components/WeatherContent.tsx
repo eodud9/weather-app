@@ -17,8 +17,7 @@ export default function WeatherContent({ weather }: WeatherContentProps) {
         <p className="font-semibold text-2xl mt-2">{weather.weather[0].description}</p>
       </div>
       <div className="flex items-center">
-        <WeatherIcon icon={weather.weather[0].icon} />
-        <WiDayCloudy className="w-30 h-30" />
+        <WeatherIcon weatherMain={weather.weather[0].main} />
         <div className="flex flex-col font-semibold text-lg">
           <span>체감온도: {formmatTemp(weather.main.feels_like)}</span>
           <span>습도: {weather.main.humidity}%</span>

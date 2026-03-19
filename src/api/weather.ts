@@ -2,7 +2,7 @@ import type { Coords, Weather, Weather5Days } from "../types/weather";
 
 // https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY} 5day per 3hours weather
 
-const API_KEY = "c9c9a3abed7b34ddca2b32459abb0c62";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export async function getWeather(lat: number, lon: number): Promise<Weather> {
   const res = await fetch(

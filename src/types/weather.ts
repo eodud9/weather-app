@@ -15,7 +15,7 @@ export interface Weather {
       description: string;
       icon: string;
       id: number;
-      main: string;
+      main: WeatherMain;
     },
   ];
 }
@@ -41,7 +41,7 @@ export interface Weather5Days {
         description: string;
         icon: string;
         id: number;
-        main: string;
+        main: WeatherMain;
       },
     ];
   }[];
