@@ -37,9 +37,9 @@ function App() {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="min-h-screen flex items-center justify-center text-white p-10"
+      className="min-h-screen flex items-center justify-center text-white p-3 md:p-10"
     >
-      <main className="relative z-10 flex flex-col items-center justify-center p-15 rounded-4xl min-w-md sm:min-w-xl md:min-w-2xl  min-h-5/6 shadow-custom">
+      <main className="relative z-10 flex flex-col items-center justify-center p-15 rounded-4xl min-w-full sm:min-w-xl md:min-w-2xl  min-h-5/6 shadow-custom">
         {content}
       </main>
     </div>
