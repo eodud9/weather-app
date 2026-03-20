@@ -18,7 +18,7 @@ import Rain from "../assets/rain.jpg";
 import Foggy from "../assets/foggy.jpg";
 import Haze from "../assets/haze.jpg";
 import Snow from "../assets/snow.jpg";
-import ThunderStorm from "../assets/thunderStorm.jpg";
+import ThunderStorm from "../assets/thunderstorm.jpg";
 import Tornado from "../assets/tornado.jpg";
 
 export function formatTemp(temp: number): string {
