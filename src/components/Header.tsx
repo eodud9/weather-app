@@ -11,8 +11,8 @@ export default function Header({ weather, handleSearchCity, searchMyWeather }: H
   const nowTime = new Date();
 
   return (
-    <header className="flex justify-between items-start w-full">
-      <div>
+    <header className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start w-full">
+      <div className="text-center md:text-start">
         <h2 className="font-bold text-5xl mb-2">{weather.name.toLocaleUpperCase()}</h2>
         <span>{nowTime.toLocaleString().slice(0, 20)}</span>
       </div>

@@ -18,20 +18,20 @@ export default function Searchbar({ search, searchMine }: SearchbarProps) {
         search(cityName);
         searchInput.current!.value = "";
       }}
-      className="flex gap-1"
+      className="flex mt-10 md:mt-0"
     >
       <input
         type="text"
         ref={searchInput}
-        className="bg-stone-100/20 px-3 py-3 rounded-xl text-stone-900 outline-none text-sm w-xs relative left-18"
+        className="bg-stone-100/20 px-3 py-3 rounded text-stone-900 outline-none text-sm w-60 md:w-xs"
         placeholder="Enter a city"
       />
-      <button className="bg-[#E9ECFF] text-stone-900 px-4 py-3 rounded-xl cursor-pointer hover:bg-[#cfd2e7] text-sm relative transition-all">
+      <button className="bg-[#E9ECFF] text-stone-900 px-4 py-3 rounded cursor-pointer hover:bg-[#cfd2e7] text-sm relative transition-all mr-0.5">
         Search
       </button>
       <button
         type="button"
-        className="bg-[#E9ECFF] text-stone-900 px-4 py-3 rounded-xl cursor-pointer hover:bg-[#cfd2e7] text-sm transition-all"
+        className="bg-[#E9ECFF] text-stone-900 px-4 py-3 rounded cursor-pointer hover:bg-[#cfd2e7] text-sm transition-all"
         onClick={searchMine}
       >
         My

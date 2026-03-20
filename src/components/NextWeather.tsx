@@ -19,7 +19,7 @@ export default function NextWeather({ weather5Days }: NextWeatherProps) {
   }
 
   return (
-    <div className="flex gap-5 mt-10">
+    <div className="flex flex-wrap justify-center gap-5 mt-10">
       {selectedDate && (
         <Modal onClose={closeModal}>
           <div className="flex flex-col text-center">
@@ -53,7 +53,7 @@ export default function NextWeather({ weather5Days }: NextWeatherProps) {
         return (
           <div
             key={date}
-            className="flex flex-col justify-between items-center bg-stone-200/70 text-stone-950 rounded-2xl p-5 hover:bg-stone-200/60 transition-all cursor-pointer"
+            className="flex flex-col justify-between items-center bg-stone-200/70 text-stone-950 rounded-2xl p-9 md:p-5 hover:bg-stone-200/60 transition-all cursor-pointer"
             onClick={() => setSelectedDate(date)}
           >
             <span className="font-semibold">{date.slice(5).replace("-", " / ")}</span>
