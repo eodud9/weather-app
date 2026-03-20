@@ -1,49 +1,33 @@
-export interface Weather {
-  main: {
-    feels_like: number;
-    grnd_level: number;
-    humidity: number;
-    pressure: number;
-    sea_level: number;
-    temp: number;
-    temp_max: number;
-    temp_min: number;
-  };
-  name: string;
-  weather: [
-    {
-      description: string;
-      icon: string;
-      id: number;
-      main: WeatherMain;
-    },
-  ];
+export interface Main {
+  feels_like: number;
+  grnd_level: number;
+  humidity: number;
+  pressure: number;
+  sea_level: number;
+  temp: number;
+  temp_max: number;
+  temp_min: number;
 }
 
-// 구조가 비슷한 type인데 확장해서 쓸순 없는지
+export interface WeatherCondition {
+  description: string;
+  icon: string;
+  id: number;
+  main: WeatherMain;
+}
+
+export interface Weather {
+  main: Main;
+  name: string;
+  weather: [WeatherCondition];
+}
 
 export interface Weather5Days {
   list: {
     dt_txt: string;
-    main: {
-      feels_like: number;
-      grnd_level: number;
-      humidity: number;
-      pressure: number;
-      sea_level: number;
-      temp: number;
-      temp_max: number;
-      temp_min: number;
-    };
+    main: Main;
     name: string;
-    weather: [
-      {
-        description: string;
-        icon: string;
-        id: number;
-        main: WeatherMain;
-      },
-    ];
+    weather: [WeatherCondition];
   }[];
 }
 

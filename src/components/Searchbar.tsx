@@ -23,7 +23,7 @@ export default function Searchbar({ search, searchMine }: SearchbarProps) {
       <input
         type="text"
         ref={searchInput}
-        className="bg-stone-100/20 px-3 py-3 rounded text-stone-900 outline-none text-sm w-xs relative left-18"
+        className="bg-stone-100/20 px-3 py-3 rounded-xl text-stone-900 outline-none text-sm w-xs relative left-18"
         placeholder="Enter a city"
       />
       <button className="bg-[#E9ECFF] text-stone-900 px-4 py-3 rounded-xl cursor-pointer hover:bg-[#cfd2e7] text-sm relative transition-all">

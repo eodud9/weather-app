@@ -11,13 +11,13 @@ export default function Header({ weather, handleSearchCity, searchMyWeather }: H
   const nowTime = new Date();
 
   return (
-    <div className="flex justify-between items-center w-full">
+    <header className="flex justify-between items-start w-full">
       <div>
-        <h2 className="font-bold text-5xl">{weather.name.toLocaleUpperCase()}</h2>
+        <h2 className="font-bold text-5xl mb-2">{weather.name.toLocaleUpperCase()}</h2>
         <span>{nowTime.toLocaleString().slice(0, 20)}</span>
       </div>
 
       <Searchbar search={handleSearchCity} searchMine={searchMyWeather} />
-    </div>
+    </header>
   );
 }
