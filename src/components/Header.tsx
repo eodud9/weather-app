@@ -13,7 +13,7 @@ export default function Header({ weather, handleSearchCity, searchMyWeather }: H
   return (
     <header className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start w-full">
       <div className="text-center md:text-start">
-        <h2 className="font-bold text-4xl md:text-6xl my-2">{weather.name.toLocaleUpperCase()}</h2>
+        <h2 className="font-bold text-4xl md:text-6xl my-2 md:my-0">{weather.name.toLocaleUpperCase()}</h2>
         <span className="text-md md:text-lg">{nowTime.toLocaleString().slice(0, 21)}</span>
       </div>
 
