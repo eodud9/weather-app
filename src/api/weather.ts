@@ -29,7 +29,7 @@ export async function get5DayWeather(lat: number, lon: number): Promise<Weather5
 
 export async function getCoords(cityName: string): Promise<Coords[]> {
   const res = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}&lang=kr`,
+    `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}&lang=kr`,
   );
 
   if (!res.ok) {

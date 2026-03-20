@@ -12,14 +12,14 @@ import {
 } from "react-icons/wi";
 import type { Weather5Days, WeatherMain } from "../types/weather";
 import type { ReactNode } from "react";
-import Sunny from "../assets/Sunny2.jpg";
-import Clouds from "../assets/Clouds.jpg";
-import Rain from "../assets/Rain.jpg";
-import Foggy from "../assets/Foggy.jpg";
-import Haze from "../assets/Haze.jpg";
-import Snow from "../assets/Snow.jpg";
-import ThunderStorm from "../assets/ThunderStorm.jpg";
-import Tornado from "../assets/Tornado.jpg";
+import Sunny from "../assets/sunny2.jpg";
+import Clouds from "../assets/clouds.jpg";
+import Rain from "../assets/rain.jpg";
+import Foggy from "../assets/foggy.jpg";
+import Haze from "../assets/haze.jpg";
+import Snow from "../assets/snow.jpg";
+import ThunderStorm from "../assets/thunderStorm.jpg";
+import Tornado from "../assets/tornado.jpg";
 
 export function formatTemp(temp: number): string {
   return (temp - 273.15).toFixed(0) + " ℃";
