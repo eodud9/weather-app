@@ -12,6 +12,14 @@ import {
 } from "react-icons/wi";
 import type { Weather5Days, WeatherMain } from "../types/weather";
 import type { ReactNode } from "react";
+import Sunny from "../assets/Sunny2.jpg";
+import Clouds from "../assets/Clouds.jpg";
+import Rain from "../assets/Rain.jpg";
+import Foggy from "../assets/Foggy.jpg";
+import Haze from "../assets/Haze.jpg";
+import Snow from "../assets/Snow.jpg";
+import ThunderStorm from "../assets/ThunderStorm.jpg";
+import Tornado from "../assets/Tornado.jpg";
 
 export function formatTemp(temp: number): string {
   return (temp - 273.15).toFixed(0) + " ℃";
@@ -45,27 +53,27 @@ export function getWeatherIcon(weatherMain: WeatherMain, size = 50): ReactNode {
 
 export function getBgForWeatherMain(weatherMain: WeatherMain) {
   if (["Mist", "Smoke", "Haze", "Dust", "Fog", "Sand", "Ash", "Squall"].includes(weatherMain)) {
-    return "/src/assets/Foggy.jpg";
+    return Foggy;
   }
   switch (weatherMain) {
     case "Clear":
-      return "/src/assets/Sunny2.jpg";
+      return Sunny;
     case "Clouds":
-      return "/src/assets/Clouds.jpg";
+      return Clouds;
     case "Rain":
-      return "/src/assets/Rain.jpg";
+      return Rain;
     case "Drizzle":
-      return "/src/assets/Rain.jpg";
+      return Rain;
     case "Thunderstorm":
-      return "/src/assets/ThunderStorm.jpg";
+      return ThunderStorm;
     case "Snow":
-      return "/src/assets/Snow.jpg";
+      return Snow;
     case "Haze":
-      return "/src/assets/Haze.jpg";
+      return Haze;
     case "Tornado":
-      return "/src/assets/Tornado.jpg";
+      return Tornado;
     default:
-      return "/src/assets/Sunny2.jpg";
+      return Sunny;
   }
 }
 
