@@ -8,10 +8,10 @@ interface WeatherContentProps {
 
 export default function WeatherContent({ weather }: WeatherContentProps) {
   return (
-    <div className="flex flex-col md:flex-row items-center w-full min-h-80 justify-center md:justify-between p-15">
+    <div className="flex flex-col md:flex-row items-center w-full md:max-w-4xl min-h-80 justify-center md:justify-between p-15">
       <div className="text-center md:text-start">
-        <span className="font-bold text-7xl">{formatTemp(weather.main.temp)}</span>
-        <p className="font-semibold text-3xl mt-2">{weather.weather[0].description}</p>
+        <span className="font-bold text-5xl md:text-7xl">{formatTemp(weather.main.temp)}</span>
+        <p className="font-semibold text-3xl md:text-3xl mt-2">{weather.weather[0].description}</p>
       </div>
       <div className="flex flex-col md:flex-row items-center">
         <WeatherIcon weatherMain={weather.weather[0].main} size={150} />
